@@ -21,15 +21,6 @@ app.use(cors(
 app.use(express.json())
 app.use(cookieParser())
 
-app.use("/", (req, res) => {
-    return res.json(
-        {
-            message: "Welcome to the server",
-            statusCode: 200
-        }
-    )
-})
-
 app.use("/api/user", userRouter)
 app.use("/api/auth", authRouter)
 app.use("/api/posts", postsRoutes)
